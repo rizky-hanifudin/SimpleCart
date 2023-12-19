@@ -51,16 +51,6 @@ to run the web app simply  use
 to access swagger use url `localhost:5000/apidocs`
 
 
-## Run test
-run test
-
-    pytest
-
-check test coverage
-
-    pytest --cov=myproj tests/
-
-
 ## Debt
 
  - Cart Update
@@ -68,7 +58,3 @@ check test coverage
  - Unit test
  - Unit test coverage
  - CI setup 
-
-## Tugas Uas 1
-Lengkapi test function berikut
-https://github.com/agungperdananto/SimpleCart/blob/616785ea52b257a3060ad1656d15254295e73741/test/test_routes.py#L18-L20

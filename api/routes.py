@@ -1,5 +1,5 @@
 from http import HTTPStatus
-from flask import jsonify, request, Blueprint
+from flask import Blueprint, jsonify, request
 from flasgger import swag_from
 from sqlalchemy import select, delete
 from sqlalchemy.exc import NoResultFound
@@ -12,6 +12,7 @@ from engine import base_engine as engine
 home_api = Blueprint('api', __name__)
 
 session = Session(engine)
+
 
 @home_api.route('/products', methods=["GET"])
 @swag_from({
@@ -37,6 +38,7 @@ def products():
         """
     keyword = request.args.get('q')
     sku = request.args.get('sku')
+
     query = select(Product)
 
     if keyword:
